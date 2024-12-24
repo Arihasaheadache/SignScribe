@@ -60,6 +60,10 @@ with mp.solutions.holistic.Holistic(min_tracking_confidence=0.5, min_detection_c
                     cv2.imshow('Live Feed', image)
                     cv2.waitKey(1)
 
+                kp = extract_kp(results)
+                path = os.path.join(PATH,action,str(sequence),str(frame))
+                np.save(path,kp)
+
     #Closing camera after recording 
     cap.release()
     cv2.destroyAllWindows()

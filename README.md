@@ -9,6 +9,6 @@ Because I wanna learn how to make wheels, duh... All things aside, my fascinatio
 
 For now, the program simply collects your data (because why should the big tech guys have all your information)
 
-##Data Collection
+## Data Collection
 
 When running collecting_data.py your camera feed opens and instructions are given to record various hand signs. Once all actions are completed, it exits gracefully

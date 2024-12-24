@@ -7,4 +7,8 @@ Because I wanna learn how to make wheels, duh... All things aside, my fascinatio
 
 ## How does it work?
 
-As I update the app, I will probably also update the readme file, so keep in touch ig :]
+For now, the program simply collects your data (because why should the big tech guys have all your information)
+
+##Data Collection
+
+When running collecting_data.py your camera feed opens and instructions are given to record various hand signs. Once all actions are completed, it exits gracefully

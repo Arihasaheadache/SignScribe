@@ -12,3 +12,7 @@ For now, the program simply collects your data (because why should the big tech 
 ## Data Collection
 
 When running collecting_data.py your camera feed opens and instructions are given to record various hand signs. Once all actions are completed, it exits gracefully
+
+## Training model
+
+When running model.py, the compiled data is used to train the model and save the weights for further usage. This means your trained data is stored in a file which can be used wherever necessary

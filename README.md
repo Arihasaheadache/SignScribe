@@ -16,3 +16,11 @@ When running collecting_data.py your camera feed opens and instructions are give
 ## Training model
 
 When running model.py, the compiled data is used to train the model and save the weights for further usage. This means your trained data is stored in a file which can be used wherever necessary
+
+## Running the main file!
+
+When running main.py, the trained model will be loaded and will be used to predict the hand signs captured by the camera during the live feed, and the appropriate word(s) will show up on the live feed itself!
+
+### Note
+
+I'm hoping to add better explanations here soon

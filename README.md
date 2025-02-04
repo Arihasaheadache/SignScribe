@@ -1,26 +1,29 @@
 # SignScribe
 A hand sign translation model using Neural Networks
 
-## Why are you re-inventing the wheel?
-
-Because I wanna learn how to make wheels, duh... All things aside, my fascination with sign language has been evident from the very start. Also, now that AI/ML is becoming a hot topic, I felt like building my own neural networks and ml models and replacing the ones I use here would be a nice learning curve.
-
 ## How does it work?
 
-For now, the program simply collects your data (because why should the big tech guys have all your information)
+The program is divided into three parts:
+
+* Data Collection
+* Model Training
+* Main Program
 
 ## Data Collection
 
-When running collecting_data.py your camera feed opens and instructions are given to record various hand signs. Once all actions are completed, it exits gracefully
+To collect data for teaching the model new signs or adding better quality data to already present signs, you need to run `data.py`. The program uses your live camera feed to capture hand signs, and allows for label modification and shows the frame and sequence numbers for better understanding of how to collect data. Once the program is finished running, it gives a folder of sub-folders of the various words. At the smallest unit, we will be left with numpy files of arrays containing values that we captured from the live feed.
 
 ## Training model
 
-When running model.py, the compiled data is used to train the model and save the weights for further usage. This means your trained data is stored in a file which can be used wherever necessary
+Once data is collected, we can run `model.py`. We are using Dense and LSTM as our layers to teach the model how to identify signs on the basis of the given data. Note: Depending on how your data has been collected, you may have to make slight changes to the code, the same is shown in the code itself.
+
+After the model is done processing the data, it will be stored as an .h5 file for ease of use. You can easily change it to work with tensorflow lite depending on your needs by converting it into a .tflite file (Alternatively, simply saving it as a keras model file with the .keras extension also works).
 
 ## Running the main file!
 
-When running main.py, the trained model will be loaded and will be used to predict the hand signs captured by the camera during the live feed, and the appropriate word(s) will show up on the live feed itself!
+If everything is functional, then you can finally run the `main.py` file! The model will load and input will be the live feed of your camera. By default I have kept Mediapipe Support off, which means you will not see keypoints on your live feed. To change that you can invoke the mediapipe function `draw_landmarks()` via the `functions.py` file. 
 
-### Note
+The sign language will be translated to text and printed on the live feed view. As usual you can commit any changes to the code to print to console or anything else. 
+[By default accuracy is kept really high as to shoot for a more accurate result, but for cases of overfitting its best to lower the accuracy]
 
-I'm hoping to add better explanations here soon
+

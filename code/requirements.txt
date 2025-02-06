@@ -1,6 +1,6 @@
-mediapipe
-numpy
-opencv-python
-keyboard
-tensorflow
+mediapipe==0.10.11
+numpy==1.24.3
+opencv-python==4.11.0.86
+keyboard==0.13.5
+tensorflow==2.13.0
 scikit-learn
